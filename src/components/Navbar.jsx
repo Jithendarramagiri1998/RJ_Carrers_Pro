@@ -1,34 +1,21 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+// src/components/Navbar.js
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const NAV_ITEMS = [
-  { name: "Home", path: "/" },
-  { name: "Services", path: "/services" },
-  { name: "About", path: "/about" },
-  { name: "Testimonials", path: "/testimonials" },
-  { name: "Contact", path: "/contact" },
-];
-
-export default function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="bg-white sticky top-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center font-sans">
-        <NavLink to="/" className="text-2xl font-bold text-primary">RJ Careers Pro</NavLink>
-        <ul className="flex space-x-6 text-gray-700">
-          {NAV_ITEMS.map(item => (
-            <li key={item.path}>
-              <NavLink
-                to={item.path}
-                className={({ isActive }) =>
-                  `hover:text-primary transition ${
-                    isActive ? 'text-primary underline' : ''
-                  }`
-                }
-              >{item.name}</NavLink>
-            </li>
-          ))}
-        </ul>
+    <nav className="bg-gray-900 text-white px-4 py-3 fixed top-0 w-full z-50 shadow-md">
+      <div className="max-w-6xl mx-auto flex justify-between items-center">
+        <Link to="/" className="text-2xl font-bold">RJ Careers Pro</Link>
+        <div className="space-x-6">
+          <Link to="/" className="hover:text-yellow-400">Home</Link>
+          <Link to="/about" className="hover:text-yellow-400">About</Link>
+          <Link to="/services" className="hover:text-yellow-400">Services</Link>
+          <Link to="/contact" className="hover:text-yellow-400">Contact</Link>
+        </div>
       </div>
     </nav>
   );
-}
+};
+
+export default Navbar;
