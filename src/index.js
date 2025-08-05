@@ -1,17 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { HelmetProvider } from 'react-helmet-async';
+import { ErrorBoundary } from 'react-error-boundary';
+import './index.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+function ErrorFallback({ error }) {
+  return (
+    <div className="p-8 text-center">
+      <h1 className="text-red-500 text-3xl font-bold">Something went wrong!</h1>
+      <pre className="mt-4 text-sm text-gray-300">{error.message}</pre>
+    </div>
+  );
+}
+
 root.render(
   <React.StrictMode>
-    <App />
+    <HelmetProvider>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <App />
+      </ErrorBoundary>
+    </HelmetProvider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

@@ -3,16 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="RJ Careers Pro – Career support, resume building, interview prep, and LinkedIn branding." />
-    <meta name="keywords" content="RJ Careers Pro, Resume Building, LinkedIn Optimization, Career Support, Job Hunt" />
+    
+    <!-- Primary Meta Tags -->
+    <title>RJ Careers Pro | DevOps Career Services & Resume Optimization</title>
+    <meta name="description" content="Professional DevOps career services including resume optimization, LinkedIn profile makeovers, interview coaching, and career strategy for tech professionals." />
+    <meta name="keywords" content="DevOps career, resume optimization, LinkedIn makeover, interview preparation, career coaching, ATS resume, tech jobs, salary negotiation" />
     <meta name="author" content="Ramagiri Jithendar" />
-    <title>RJ Careers Pro</title>
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#0f172a" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://rjcareerspro.com/" />
+    <meta property="og:title" content="RJ Careers Pro | DevOps Career Services" />
+    <meta property="og:description" content="Get expert help with your DevOps career - resume optimization, interview prep, and LinkedIn profile enhancement." />
+    <meta property="og:image" content="%PUBLIC_URL%/social-preview.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://rjcareerspro.com/" />
+    <meta property="twitter:title" content="RJ Careers Pro | DevOps Career Services" />
+    <meta property="twitter:description" content="Get expert help with your DevOps career - resume optimization, interview prep, and LinkedIn profile enhancement." />
+    <meta property="twitter:image" content="%PUBLIC_URL%/social-preview.jpg" />
 
+    <!-- Favicon & App Icons -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"></noscript>
   </head>
-  <body class="bg-white text-gray-900 font-sans">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+  <body class="bg-gray-50 text-gray-900 font-sans antialiased">
+    <noscript>
+      <div class="noscript-warning" style="padding: 1rem; text-align: center; background: #f8d7da; color: #721c24;">
+        <strong>JavaScript is disabled in your browser.</strong><br>
+        Some features of RJ Careers Pro website may not work properly without JavaScript enabled.
+      </div>
+    </noscript>
     <div id="root"></div>
+    
+    <!-- Fallback for browsers that don't support JS -->
+    <script>
+      document.body.classList.add('js-enabled');
+    </script>
   </body>
 </html>
