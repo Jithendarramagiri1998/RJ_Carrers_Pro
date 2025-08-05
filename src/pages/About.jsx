@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Helmet } from "react-helmet-async";
+import heroImage from '../assets/hero.jpg';
+
 <Helmet>
   <title>About - RJ Careers</title>
 </Helmet>
@@ -67,7 +69,7 @@ const About = () => {
               >
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl opacity-50 blur-lg"></div>
                 <img 
-                  src="/profile.jpg" // Replace with your profile image
+                  src={heroImage}
                   alt="Ramagiri Jithendar"
                   className="relative rounded-2xl w-full h-auto border-4 border-gray-800 shadow-2xl"
                 />
